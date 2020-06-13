@@ -45,14 +45,14 @@
   },
   "oauth2_url": {
       "type": "textbox",
-      "value": "/oauth2/token",
+      "value": "/oauth2/token?grant_type=client_credentials",
       "label": "Twitter API url",
       "tooltip": "Twitter API url",
       "group": "Core"
   },
   "timeline_url": {
       "type": "textbox",
-      "value": "/1.1/statuses/user_timeline.json?tweet_mode=extended&count=10&screen_name={SCREEN_NAME}",
+      "value": "/1.1/statuses/user_timeline.json?tweet_mode=extended&count={}&screen_name=",
       "label": "Twitter API url",
       "tooltip": "Twitter API url",
       "group": "Core"
@@ -83,14 +83,14 @@
       "group": "General"
   },
   "api_key": {
-      "type": "password",
+      "type": "textbox",
       "value": "",
       "label": "Tweeter API Key",
       "tooltip": "Your api key from tweeter Dev.",
       "group": "Secrets"
   },
   "api_secret": {
-      "type": "password",
+      "type": "textbox",
       "value": "",
       "label": "Tweeter API Secret Key",
       "tooltip": "Your api secret key from tweeter Dev.",
