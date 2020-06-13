@@ -1,0 +1,149 @@
+{
+  "output_file": "config.json",
+
+  "liveOnly": {
+      "type": "checkbox",
+      "value": true,
+      "label": "Live Only Mode",
+      "tooltip": "True if you want it to only run when you are live",
+      "group" : "General"
+  },
+  "command": {
+      "type": "textbox",
+      "value": "!RetweetThis",
+      "label": "Retweet call command",
+      "tooltip": "Fetch the last live tweet",
+      "group": "General"
+  },
+  "screen_name": {
+      "type": "textbox",
+      "value": "Belug23",
+      "label": "Twitter @name",
+      "tooltip": "You twitter name",
+      "group": "General"
+  },
+  "search_hashtag": {
+      "type": "textbox",
+      "value": "GoingLive",
+      "label": "Target Hashtag #",
+      "tooltip": "The text from the hashtag your use to go live",
+      "group": "General"
+  },
+  "retweet_text": {
+      "type": "textbox",
+      "value": "Please, retweet this: {}",
+      "label": "Call text",
+      "tooltip": "The text used to call viewers to action",
+      "group": "General"
+  },
+  "base_url": {
+      "type": "textbox",
+      "value": "https://api.twitter.com",
+      "label": "Twitter API url",
+      "tooltip": "Twitter API url",
+      "group": "Core"
+  },
+  "oauth2_url": {
+      "type": "textbox",
+      "value": "/oauth2/token",
+      "label": "Twitter API url",
+      "tooltip": "Twitter API url",
+      "group": "Core"
+  },
+  "timeline_url": {
+      "type": "textbox",
+      "value": "/1.1/statuses/user_timeline.json?tweet_mode=extended&count=10&screen_name={SCREEN_NAME}",
+      "label": "Twitter API url",
+      "tooltip": "Twitter API url",
+      "group": "Core"
+  },
+  "tweet_url": {
+      "type": "textbox",
+      "value": "https://twitter.com/i/web/status/{}",
+      "label": "Tweet url",
+      "tooltip": "The url on tweeter for the tweet if you add it's id.",
+      "group": "Core"
+  },
+  "Permission": {
+    "type": "dropdown",
+    "value": "editor",
+    "items": ["everyone","moderator","subscriber","user_specific","editor"],
+    "label": "Permission",
+    "tooltip": "Who is able to use the command",
+    "group": "Core"
+  },
+  "number_of_tweets": {
+      "type": "slider",
+      "value": 10.0,
+      "min": 1,
+      "max": 100,
+      "ticks": 1.0,
+      "label": "Number of tweets",
+      "tooltip": "the number of tweets to fetch",
+      "group": "General"
+  },
+  "api_key": {
+      "type": "password",
+      "value": "",
+      "label": "Tweeter API Key",
+      "tooltip": "Your api key from tweeter Dev.",
+      "group": "Secrets"
+  },
+  "api_secret": {
+      "type": "password",
+      "value": "",
+      "label": "Tweeter API Secret Key",
+      "tooltip": "Your api secret key from tweeter Dev.",
+      "group": "Secrets"
+  },
+  "useCooldown": {
+      "type": "checkbox",
+      "value": false,
+      "label": "Use Cooldown",
+      "tooltip": "Enable/Disable cooldown and user cooldown",
+      "group": "Cooldown"
+  },
+  "useCooldownMessages": {
+      "type": "checkbox",
+      "value": true,
+      "label": "Use Cooldown Messages",
+      "tooltip": "Enable/Disable cooldown messages",
+      "group": "Cooldown"
+  },
+  "cooldown": {
+      "type": "numberbox",
+      "label": "Cooldown (seconds)",
+      "value": 60,
+      "tooltip": "Cooldown in seconds.",
+      "group": "Cooldown"
+  },
+  "onCooldown": {
+      "type": "textbox",
+      "value": "{user}, {command} is still on cooldown for {cd} minutes!",
+      "label": "Cooldown Response",
+      "tooltip": "The message that the bot will display when the command is on cooldown. \r\n {user} = Username\r\n {cd} = time remaining",
+      "group": "Cooldown"
+  },
+  "userCooldown": {
+      "type": "numberbox",
+      "label": "User Cooldown (seconds)",
+      "value": 180,
+      "tooltip": "User cooldown in seconds.",
+      "group": "Cooldown"
+  },
+  "onUserCooldown": {
+      "type": "textbox",
+      "value": "{user}, {command} is still on user cooldown for {cd} minutes!",
+      "label": "User Cooldown Response",
+      "tooltip": "The message that the bot will display when the command is on user cooldown. \r\n {user} = Username\r\n {cd} = time remaining",
+      "group": "Cooldown"
+  },
+  "openReadMe": {
+      "type": "button",
+      "label": "Open 'Readme Me' file",
+      "tooltip": "Opens the 'Readme.txt' for this script.",
+      "function": "OpenReadMe",
+      "wsevent": "",
+      "group": ""
+  }
+}
