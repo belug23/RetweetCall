@@ -31,7 +31,7 @@
   },
   "retweet_text": {
       "type": "textbox",
-      "value": "Please, retweet this: {}",
+      "value": "{user} is calling for a retweet, please go retweet this tweet: {tweet_url}",
       "label": "Call text",
       "tooltip": "The text used to call viewers to action",
       "group": "General"
